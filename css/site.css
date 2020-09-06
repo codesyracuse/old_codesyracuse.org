@@ -1,0 +1,42 @@
+---
+---
+/* Front matter is necessary for Jekyll */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+h1 {
+  @apply text-2xl mt-4 leading-tight font-extrabold text-gray-700;
+}
+
+h2 {
+  @apply text-xl mt-4 font-semibold text-gray-700;
+}
+
+h3 {
+  @apply text-xl mt-4 font-semibold text-gray-700;
+}
+
+h4 {
+  @apply text-lg mt-4 font-semibold text-gray-700 ;
+}
+
+@screen md {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+}
+
+
+/* Write your styles above this line. */
+
+@tailwind utilities;
