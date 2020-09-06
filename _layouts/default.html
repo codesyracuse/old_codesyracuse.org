@@ -1,0 +1,25 @@
+<html lang="en" class="text-gray-900 antialiased leading-tight">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    {% feed_meta %}
+    {% seo %}
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body class="leading-relaxed tracking-wide flex flex-col">
+    {% include header.html %}
+    </div>
+
+    <section class="container w-full md:max-w-2xl mx-auto pt-10 min-h-full">
+      {{ content }}
+    </section>
+
+    {% include footer.html %}
+
+    {% if jekyll.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
+  </body>
+</html>
