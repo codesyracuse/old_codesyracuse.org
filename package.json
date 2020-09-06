@@ -6,7 +6,8 @@
     "purgecss": "^2.1.0"
   },
   "dependencies": {
-    "tailwindcss": "^1.8.2",
-    "postcss-nesting": "^7.0.1"
+    "@tailwindcss/typography": "^0.2.0",
+    "postcss-nesting": "^7.0.1",
+    "tailwindcss": "^1.8.2"
   }
 }
