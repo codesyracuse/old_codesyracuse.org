@@ -1,0 +1,163 @@
+---
+layout: default
+---
+  <div data-controller="hello">
+    <input data-target="hello.name" type="text">
+    …
+  </div>
+
+
+
+
+<script src="https://js.stripe.com/v3/"></script>
+  <script>
+// Create a Stripe client.
+var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+// Create an instance of Elements.
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+// (Note that this demo uses a wider set of styles than the guide below.)
+var style = {
+  base: {
+    color: '#32325d',
+    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    fontSmoothing: 'antialiased',
+    fontSize: '16px',
+    '::placeholder': {
+      color: '#aab7c4'
+    }
+  },
+  invalid: {
+    color: '#fa755a',
+    iconColor: '#fa755a'
+  }
+};
+
+// Create an instance of the card Element.
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>.
+card.mount('#card-element');
+// Handle real-time validation errors from the card Element.
+card.on('change', function(event) {
+  var displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+});
+
+// Handle form submission.
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      // Inform the user if there was an error.
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+      // Send the token to your server.
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+
+// Submit the form with the token ID.
+function stripeTokenHandler(token) {
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+
+  // Submit the form
+  form.submit();
+}
+  </script>
+
+<form action="/charge" method="post" id="payment-form">
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <button>Submit Payment</button>
+</form>
+
+
+<form class="antialiased max-w-xs mx-auto" id="payment-form">
+  <div class="flex gap-x-3">
+  <button class="flex-1 px-4 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+    $25<br/>USD
+  </button>
+  <button class="flex-1 px-4 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+    $50<br/>USD
+  </button>
+  <button class="flex-1 px-4 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+    $10<br/>USD
+  </button>
+  <input class="flex-1 py-2 px-3 mx-auto mb-4 border-gray-300 border rounded-md" placeholder="other amount" id="giving-amount" />
+  </div>
+        <button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full mx-auto block" id="giving-button">
+        Donate
+      </button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript">
+        var errorText = "Failed. You have not been charged.";
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var submitButton = document.getElementById("giving-button");
+
+            var stripe = Stripe("pk_test_yO4eFaj2SStHrBWL1a9wHk0g");
+
+            var form = document.getElementById("payment-form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const buttonText = submitButton.innerText;
+                submitButton.innerText = "Working...";
+
+                var data = {
+                    amount: document.getElementById("giving-amount").valueAsNumber * 100,
+                };
+
+                // create stripe session
+                $.ajax({
+                    type: "POST",
+                    url: "/.netlify/functions/get_checkout_session/",
+                    data: JSON.stringify(data),
+                    success: function(data) {
+                        switch (data.status) {
+                            case "session-created":
+                                stripe
+                                    .redirectToCheckout({
+                                        sessionId: data.sessionId
+                                    })
+                                    .then(function(result) {
+                                        submitButton.innerText = result.error.message;
+                                    });
+                                break;
+                            default:
+                                submitButton.innerText = errorText;
+                        }
+                    },
+                    dataType: "json"
+                });
+            });
+        });
+    </script>
