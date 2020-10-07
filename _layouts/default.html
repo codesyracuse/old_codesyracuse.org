@@ -14,21 +14,25 @@
         const application = Stimulus.Application.start()
 
         application.register("hello", class extends Stimulus.Controller {
-          static get targets() {
-            return [ "name" ]
+          static targets = [ "name" ]
+
+          greet() {
+            console.log(`Hello, ${this.name}!`)
           }
 
-          // …
+          get name() {
+            return this.nameTarget.value
+          }
         })
       })()
     </script>
   </head>
   <body class="leading-relaxed tracking-wide flex flex-col">
-    {% include header.html %}
-    </div>
+    {% include navigation.html %}
 
-    <section class="container w-full md:max-w-2xl mx-auto pt-10 min-h-full">
-      {{ content }}
+
+    <section class="py-10">
+    {{ content }}
     </section>
 
     {% include footer.html %}
