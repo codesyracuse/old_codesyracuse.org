@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "yarn run build"
+  command = "yarn run build && jekyll build"
   functions = "dist/netlify_functions"
 
 [context.production.environment]
