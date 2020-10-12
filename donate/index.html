@@ -1,161 +1,89 @@
 ---
-layout: default
+layout: page
 ---
-<script src="https://js.stripe.com/v3/"></script>
-  <script>
-// Create a Stripe client.
-var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
-// Create an instance of Elements.
-var elements = stripe.elements();
-
-// Custom styling can be passed to options when creating an Element.
-// (Note that this demo uses a wider set of styles than the guide below.)
-var style = {
-  base: {
-    color: '#32325d',
-    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-    fontSmoothing: 'antialiased',
-    fontSize: '16px',
-    '::placeholder': {
-      color: '#aab7c4'
-    }
-  },
-  invalid: {
-    color: '#fa755a',
-    iconColor: '#fa755a'
-  }
-};
-
-// Create an instance of the card Element.
-var card = elements.create('card', {style: style});
-
-// Add an instance of the card Element into the `card-element` <div>.
-card.mount('#card-element');
-// Handle real-time validation errors from the card Element.
-card.on('change', function(event) {
-  var displayError = document.getElementById('card-errors');
-  if (event.error) {
-    displayError.textContent = event.error.message;
-  } else {
-    displayError.textContent = '';
-  }
-});
-
-// Handle form submission.
-var form = document.getElementById('payment-form');
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  stripe.createToken(card).then(function(result) {
-    if (result.error) {
-      // Inform the user if there was an error.
-      var errorElement = document.getElementById('card-errors');
-      errorElement.textContent = result.error.message;
-    } else {
-      // Send the token to your server.
-      stripeTokenHandler(result.token);
-    }
-  });
-});
-
-// Submit the form with the token ID.
-function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
-  var form = document.getElementById('payment-form');
-  var hiddenInput = document.createElement('input');
-  hiddenInput.setAttribute('type', 'hidden');
-  hiddenInput.setAttribute('name', 'stripeToken');
-  hiddenInput.setAttribute('value', token.id);
-  form.appendChild(hiddenInput);
-
-  // Submit the form
-  form.submit();
-}
-  </script>
-
-
-  <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
-    <div class="text-center">
-      <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-        Help make Syracuse a leader in
-        <br>
-        <span class="text-indigo-600">the new digital economy</span>
-      </h2>
-      <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-      </p>
+<div class="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
+  <div class="text-center">
+    <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+      Help make Syracuse a leader in
+      <br>
+      <span class="text-indigo-600">the new digital economy</span>
+    </h2>
+    <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+      Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+    </p>
+  </div>
+</div>
+<div class="mt-20">
+  <form class="antialiased max-w-xs mx-auto" id="payment-form">
+    <div class="flex gap-x-3 mb-4">
+      <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
+        $25<br/>USD
+      </button>
+      <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
+        $50<br/>USD
+      </button>
+      <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
+        $100<br/>USD
+      </button>
     </div>
-  </div>
-  <div class="mt-20">
-    <form class="antialiased max-w-xs mx-auto" id="payment-form">
-      <div class="flex gap-x-3 mb-4">
-        <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
-          $25<br/>USD
-        </button>
-        <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
-          $50<br/>USD
-        </button>
-        <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
-          $100<br/>USD
-        </button>
+    <div class="flex gap-x-3 mb-4">
+      <div class="mt-1 flex rounded-md shadow-sm">
+        <span class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-indigo-500 bg-indigo-50 text-indigo-500 font-semibold sm:text-lg">$</span>
+        <input class="flex-1 form-input w-full min-w-0 border p-4 border-indigo-500 rounded-none rounded-r-md transition duration-150 ease-in-out text-xl leading-5" placeholder="Other donation amount" id="giving-amount" />
       </div>
-      <div class="flex gap-x-3 mb-4">
-        <div class="mt-1 flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-indigo-500 bg-indigo-50 text-indigo-500 font-semibold sm:text-lg">$</span>
-          <input class="flex-1 form-input w-full min-w-0 border p-4 border-indigo-500 rounded-none rounded-r-md transition duration-150 ease-in-out text-xl leading-5" placeholder="Other donation amount" id="giving-amount" />
-        </div>
-      </div>
+    </div>
 
-      <div class="flex justify-center">
-        <button class="py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue focus:bg-indigo-500 active:bg-indigo-600 transition duration-150 ease-in-out" id="giving-button">
-          Donate
-        </button>
-      </div>
-    </form>
-  </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script type="text/javascript">
-        var errorText = "Failed. You have not been charged.";
+    <div class="flex justify-center">
+      <button class="py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue focus:bg-indigo-500 active:bg-indigo-600 transition duration-150 ease-in-out" id="giving-button">
+        Donate
+      </button>
+    </div>
+  </form>
+</div>
 
-        document.addEventListener("DOMContentLoaded", function(event) {
-            var submitButton = document.getElementById("giving-button");
 
-            var stripe = Stripe("pk_test_yO4eFaj2SStHrBWL1a9wHk0g");
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript">
+    var errorText = "Failed. You have not been charged.";
 
-            var form = document.getElementById("payment-form");
-            form.addEventListener("submit", function(event) {
-                event.preventDefault();
-                const buttonText = submitButton.innerText;
-                submitButton.innerText = "Working...";
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var submitButton = document.getElementById("giving-button");
 
-                var data = {
-                    amount: document.getElementById("giving-amount").valueAsNumber * 100,
-                };
+        var stripe = Stripe("pk_kZf5YzoltCtSRy7PVvzkPv6278qVa");
 
-                // create stripe session
-                $.ajax({
-                    type: "POST",
-                    url: "/.netlify/functions/get_checkout_session/",
-                    data: JSON.stringify(data),
-                    success: function(data) {
-                        switch (data.status) {
-                            case "session-created":
-                                stripe
-                                    .redirectToCheckout({
-                                        sessionId: data.sessionId
-                                    })
-                                    .then(function(result) {
-                                        submitButton.innerText = result.error.message;
-                                    });
-                                break;
-                            default:
-                                submitButton.innerText = errorText;
-                        }
-                    },
-                    dataType: "json"
-                });
+        var form = document.getElementById("payment-form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const buttonText = submitButton.innerText;
+            submitButton.innerText = "Working...";
+
+            var data = {
+                amount: document.getElementById("giving-amount").valueAsNumber * 100,
+            };
+
+            // create stripe session
+            $.ajax({
+                type: "POST",
+                url: "/.netlify/functions/get_checkout_session/",
+                data: JSON.stringify(data),
+                success: function(data) {
+                    switch (data.status) {
+                        case "session-created":
+                            stripe
+                                .redirectToCheckout({
+                                    sessionId: data.sessionId
+                                })
+                                .then(function(result) {
+                                    submitButton.innerText = result.error.message;
+                                });
+                            break;
+                        default:
+                            submitButton.innerText = errorText;
+                    }
+                },
+                dataType: "json"
             });
         });
-    </script>
+    });
+</script>

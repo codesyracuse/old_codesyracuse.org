@@ -33,8 +33,8 @@ exports.handler = function(event, context, callback) {
   // we need to provide a couple of redirect urls:
   stripe.checkout.sessions.create(
     {
-      success_url: "https://donate-form-example.netlify.com/success",
-      cancel_url: "https://donate-form-example.netlify.com/cancel",
+      success_url: "https://vigorous-elion-65fc85.netlify.app/success",
+      cancel_url: "https://vigorous-elion-65fc85.netlify.app/cancel",
       payment_method_types: ["card"],
       billing_address_collection: "required",
       payment_method_types: ["card"],
