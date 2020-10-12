@@ -29,7 +29,7 @@ layout: page
     <div class="flex gap-x-3 mb-4">
       <div class="mt-1 flex rounded-md shadow-sm">
         <span class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-indigo-500 bg-indigo-50 text-indigo-500 font-semibold sm:text-lg">$</span>
-        <input class="flex-1 form-input w-full min-w-0 border p-4 border-indigo-500 rounded-none rounded-r-md transition duration-150 ease-in-out text-xl leading-5" placeholder="Other donation amount" id="giving-amount" />
+        <input type="number" min="0" class="flex-1 form-input w-full min-w-0 border p-4 border-indigo-500 rounded-none rounded-r-md transition duration-150 ease-in-out text-xl leading-5" placeholder="Other donation amount" id="giving-amount" />
       </div>
     </div>
 
@@ -53,10 +53,13 @@ layout: page
         var stripe = Stripe("pk_kZf5YzoltCtSRy7PVvzkPv6278qVa");
 
         var form = document.getElementById("payment-form");
+            console.log(form)
         form.addEventListener("submit", function(event) {
             event.preventDefault();
             const buttonText = submitButton.innerText;
             submitButton.innerText = "Working...";
+
+            console.log(document.getElementById("giving-amount").valueAsNumber)
 
             var data = {
                 amount: document.getElementById("giving-amount").valueAsNumber * 100,
