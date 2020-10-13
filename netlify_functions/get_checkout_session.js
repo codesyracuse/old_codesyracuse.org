@@ -41,7 +41,8 @@ exports.handler = function(event, context, callback) {
       submit_type: "donate",
       line_items: [
         {
-          name: "Donation!",
+          name: "Donate to CODES",
+          description: "CODES is a 40?? non profit dedicated to improving the software developer ecosystem in Syracuse NY and the surrounding areas",
           amount: data.amount,
           currency: "usd",
           quantity: 1

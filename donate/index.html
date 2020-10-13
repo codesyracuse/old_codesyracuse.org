@@ -1,6 +1,50 @@
 ---
 layout: page
 ---
+<script src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript">
+  function contactForm() {
+    return {
+      amount: '',
+      errorMessage: "Unable to make donation. You have not been charged.",
+
+      submitData() {
+        var stripe = Stripe("pk_kZf5YzoltCtSRy7PVvzkPv6278qVa");
+        this.errorMessage = null
+
+        fetch('/.netlify/functions/get_checkout_session/',
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount: this.amount })
+          }
+        )
+        .then((response) => {
+            return response.json()
+        }).then((json) => {
+          console.log('parsed json', json)
+          switch (json.status) {
+            case "session-created":
+              stripe.redirectToCheckout({
+                sessionId: json.sessionId
+              })
+              .then(function(result) {
+                this.errorMessage = result.error.message
+              });
+          break;
+          default:
+            this.errorMessage = errorText;
+          }
+          return
+        })
+        .catch(() => {
+          this.errorMessage = "Unable to make donation. You have not been charged."
+        })
+      }
+    }
+  }
+</script>
+
 <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
   <div class="text-center">
     <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
@@ -14,79 +58,62 @@ layout: page
   </div>
 </div>
 <div class="mt-20">
-  <form class="antialiased max-w-xs mx-auto" id="payment-form">
+  <form
+     x-data="contactForm()" @submit.prevent="submitData"
+    class="antialiased max-w-xs mx-auto" id="payment-form" action="/.netlify/functions/get_checkout_session/">
     <div class="flex gap-x-3 mb-4">
-      <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
+      <button
+        type="button"
+        :class="{'bg-indigo-500 text-white': amount === '25' }"
+        @click="amount = '25'"
+        class="flex-1 px-4 bg-transparent hover:bg-indigo-400 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
         $25<br/>USD
       </button>
-      <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
+      <button
+        type="button"
+        :class="{'bg-indigo-500 text-white': amount === '50' }"
+        @click="amount = '50'"
+        class="flex-1 px-4 bg-transparent hover:bg-indigo-400 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
         $50<br/>USD
       </button>
-      <button class="flex-1 px-4 bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
+      <button
+        type="button"
+        :class="{'bg-indigo-500 text-indigo-100': amount === '100' }"
+        @click="amount = '100'"
+        class="flex-1 px-4 bg-transparent hover:bg-indigo-400 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
         $100<br/>USD
       </button>
     </div>
     <div class="flex gap-x-3 mb-4">
       <div class="mt-1 flex rounded-md shadow-sm">
         <span class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-indigo-500 bg-indigo-50 text-indigo-500 font-semibold sm:text-lg">$</span>
-        <input type="number" min="0" class="flex-1 form-input w-full min-w-0 border p-4 border-indigo-500 rounded-none rounded-r-md transition duration-150 ease-in-out text-xl leading-5" placeholder="Other donation amount" id="giving-amount" />
+        <input
+            @click="amount = 'other'"
+            x-model.number="amount"
+        type="number" min="0" class="flex-1 form-input w-full min-w-0 border p-4 border-indigo-500 rounded-none rounded-r-md transition duration-150 ease-in-out text-xl leading-5" placeholder="Other donation amount" id="giving-amount" />
+      </div>
+    </div>
+
+    <div x-show="errorMessage" class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <!-- Heroicon name: exclamation -->
+          <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="ml-3">
+          <p class="text-md leading-5 text-yellow-700" x-text="errorMessage">
+          </p>
+        </div>
       </div>
     </div>
 
     <div class="flex justify-center">
-      <button class="py-2 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue focus:bg-indigo-500 active:bg-indigo-600 transition duration-150 ease-in-out" id="giving-button">
+      <button class="py-2 px-4 border border-transparent text-2xl font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-500 focus:outline-none focus:shadow-outline-blue focus:bg-indigo-500 active:bg-indigo-600 transition duration-150 ease-in-out" id="giving-button">
         Donate
       </button>
     </div>
   </form>
 </div>
 
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-<script src="https://js.stripe.com/v3/"></script>
-<script type="text/javascript">
-    var errorText = "Failed. You have not been charged.";
-
-    document.addEventListener("DOMContentLoaded", function(event) {
-        var submitButton = document.getElementById("giving-button");
-
-        var stripe = Stripe("pk_kZf5YzoltCtSRy7PVvzkPv6278qVa");
-
-        var form = document.getElementById("payment-form");
-            console.log(form)
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            const buttonText = submitButton.innerText;
-            submitButton.innerText = "Working...";
-
-            console.log(document.getElementById("giving-amount").valueAsNumber)
-
-            var data = {
-                amount: document.getElementById("giving-amount").valueAsNumber * 100,
-            };
-
-            // create stripe session
-            $.ajax({
-                type: "POST",
-                url: "/.netlify/functions/get_checkout_session/",
-                data: JSON.stringify(data),
-                success: function(data) {
-                    switch (data.status) {
-                        case "session-created":
-                            stripe
-                                .redirectToCheckout({
-                                    sessionId: data.sessionId
-                                })
-                                .then(function(result) {
-                                    submitButton.innerText = result.error.message;
-                                });
-                            break;
-                        default:
-                            submitButton.innerText = errorText;
-                    }
-                },
-                dataType: "json"
-            });
-        });
-    });
-</script>
