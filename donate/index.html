@@ -6,7 +6,7 @@ layout: page
   function contactForm() {
     return {
       amount: '',
-      errorMessage: "Unable to make donation. You have not been charged.",
+      errorMessage: null,
 
       submitData() {
         var stripe = Stripe("pk_kZf5YzoltCtSRy7PVvzkPv6278qVa");
@@ -16,7 +16,7 @@ layout: page
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ amount: this.amount })
+            body: JSON.stringify({ amount: this.amount * 100 })
           }
         )
         .then((response) => {
@@ -64,22 +64,22 @@ layout: page
     <div class="flex gap-x-3 mb-4">
       <button
         type="button"
-        :class="{'bg-indigo-500 text-white': amount === '25' }"
-        @click="amount = '25'"
+        :class="{'bg-indigo-500 text-white': amount === 25 }"
+        @click="amount = 25"
         class="flex-1 px-4 bg-transparent hover:bg-indigo-400 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
         $25<br/>USD
       </button>
       <button
         type="button"
-        :class="{'bg-indigo-500 text-white': amount === '50' }"
-        @click="amount = '50'"
+        :class="{'bg-indigo-500 text-white': amount === 50 }"
+        @click="amount = 50"
         class="flex-1 px-4 bg-transparent hover:bg-indigo-400 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
         $50<br/>USD
       </button>
       <button
         type="button"
-        :class="{'bg-indigo-500 text-indigo-100': amount === '100' }"
-        @click="amount = '100'"
+        :class="{'bg-indigo-500 text-indigo-100': amount === 100 }"
+        @click="amount = 100"
         class="flex-1 px-4 bg-transparent hover:bg-indigo-400 text-indigo-700 font-semibold hover:text-white py-2 px-4 border border-indigo-500 hover:border-transparent rounded">
         $100<br/>USD
       </button>
