@@ -3,6 +3,9 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
+  purge: [
+    './_site/**/*.html',
+  ],
   theme: {
     extend: {},
   },
