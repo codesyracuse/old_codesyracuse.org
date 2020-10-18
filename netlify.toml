@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = "yarn run build && jekyll build"
+  functions = "dist/netlify_functions"
+
+[context.production.environment]
+  JEKYLL_ENV = "production"
+
+[context.branch-deploy.environment]
+  JEKYLL_ENV = "staging"
+
+[context.deploy-preview.environment]
+  JEKYLL_ENV = "staging"

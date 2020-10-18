@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="/css/site.css">
   </head>
   <body class="leading-relaxed tracking-wide flex flex-col">
-    {% include header.html %}
-    </div>
+    {% include navigation.html %}
 
-    <section class="container w-full md:max-w-2xl mx-auto pt-10 min-h-full">
-      {{ content }}
+    <section class="container w-full lg:max-w-7xl mx-auto">
+    {{ content }}
     </section>
 
     {% include footer.html %}
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "netlify-lambda build netlify_functions"
+  },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "postcss-cli": "^7.1.0",
@@ -8,6 +11,8 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
     "postcss-nesting": "^7.0.1",
-    "tailwindcss": "^1.8.2"
+    "tailwindcss": "^1.8.2",
+    "netlify-lambda": "^1.6.2",
+    "stripe": "^7.8.0"
   }
 }

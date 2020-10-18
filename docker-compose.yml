@@ -1,8 +1,0 @@
-jekyll:
-  image: jekyll/jekyll:4.1.0
-  command: jekyll serve --livereload --drafts
-  ports:
-    - 4000:4000
-    - 35729:35729
-  volumes:
-    - .:/srv/jekyll
