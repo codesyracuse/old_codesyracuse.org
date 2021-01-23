@@ -1,21 +1,47 @@
 {
-  "scripts": {
-    "build": "netlify-lambda build netlify_functions"
-  },
+  "name": "jekyll-starter-tailwind",
+  "version": "6.0.0",
+  "description": "A starter kit for using Tailwind with Jekyll",
+  "main": "gulpfile.babel.js",
   "devDependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss-cli": "^7.1.0",
-    "postcss-import": "^12.0.1",
-    "purgecss": "^2.3.0"
+    "autoprefixer": "10.1.0",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "6.26.0",
+    "browser-sync": "2.26.13",
+    "cross-env": "7.0.3",
+    "cross-spawn": "7.0.3",
+    "cssnano": "4.1.10",
+    "gulp": "4.0.2",
+    "gulp-postcss": "9.0.0",
+    "postcss": "8.2.1",
+    "postcss-import": "14.0.0",
+    "tailwindcss": "2.0.2"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "scripts": {
+    "build:production": "NODE_ENV=production gulp",
+    "build:dev": "NODE_ENV=development gulp",
+    "build": "npm run build:production",
+    "dev": "NODE_ENV=development gulp serve",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taylorbryant/jekyll-starter-tailwind.git"
+  },
+  "author": "Taylor Bryant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylorbryant/jekyll-starter-tailwind/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.3.0",
-    "netlify-lambda": "^1.6.2",
-    "postcss": "^8.2.2",
-    "postcss-nesting": "^7.0.1",
-    "stripe": "^7.8.0",
-    "tailwindcss": "^2.0.2"
+    "@tailwindcss/typography": "^0.4.0"
   }
 }
