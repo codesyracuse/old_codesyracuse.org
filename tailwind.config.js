@@ -1,3 +1,7 @@
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -7,7 +11,30 @@ module.exports = {
     './_site/**/*.html',
   ],
   theme: {
-    extend: {},
+    extend: { 
+      minHeight: {
+       '0': '0',
+       '1/4': '25%',
+       '1/2': '50%',
+       '3/4': '75%',
+       'full': '100%',
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      violet: colors.violet,
+      gray: colors.coolGray,
+      blue: colors.blue,
+      red: colors.rose,
+      teal: colors.emerald,
+      yellow: colors.amber,
+    },
   },
   variants: {},
   plugins: [

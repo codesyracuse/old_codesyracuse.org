@@ -1,9 +1,11 @@
 title: Coalition of Digital Engagements in Syracuse NY (CODES)
 email: hi@codesyracuse.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Through in-person engagements, local digital communities, and 
+  relationships with partner organizations, our mission is to educate 
+  individuals for digital careers. We will represent working 
+  professionals as well as any person who has a desire to join a 
+  digital profession. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: codesyracuse
@@ -15,6 +17,16 @@ plugins:
   - jekyll-sitemap
   - jekyll-postcss
   - jekyll-purgecss
+
+
+# jekyll-seo-tag configuration
+author: "CODES"
+url: "codesyracuse.org"
+title: "CODESyracuse"
+description: "Coalition of Digital Engagements, Syracuse"
+twitter:
+  username: "codesyracuse"
+  card: "Our mission is to educate individuals for digital careers."
 
 # Exclude from processing.
 # The following items will not be processed, by default.
