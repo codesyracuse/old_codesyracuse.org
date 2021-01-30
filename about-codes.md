@@ -2,31 +2,31 @@
 layout: prose
 ---
 
-# Coalition of Digital Events Syracuse
+# Who We Are
 
-Established in 2020, CODES is on a mission to serve and grow the technology community in Syracuse, New York through education, mentoring, and creating economic opportunity.
+We are a group of developers, engineers, and professionals in the tech industry with a desire to empower software developers in the region. We provide programming that gives students and early-career professionals opportunities to connect with and learn from mentors and professionals in the Syracuse tech community. 
 
-CODES was established in 2020 out of a frustration of watching the untapped potential
-of both professional developers and those looking to break into the industry. But not 
-having the tools to do so.
+We sponsor, host, and promote events and activities that provide education to individuals and help them connect to others in the industry. We also fund and facilitate grant projects that support individuals entering or already in digital careers. In turn, many of these projects then support local businesses and nonprofits.
 
-We saw several opportunities in Syracuse, a city not known for it's vibrant tech scene.
+## Our History
+{: .mt-6 }
 
-There is huge potential for the city of Syracuse to build up a vibrant tech scene. 
-We have bright well educated people, looking to make better lives for themselves by learning
-improving and growing personally and professionally.
+Coalition of Digital Engagement in Syracuse (CODES) was established in 2020 with a goal of serving and growing the technology community in Central New York. A group of developers, engineers, and professionals who were active in the local tech community saw a need for more education, a local mentorship program, and other programming to create economic opportunities.
 
-We just had to give them opportunities.
+We looked around and saw talented, driven developers, people who show up to meetups, hungry to learn and improve, creating opportunities for themselves through new careers, and working their way up the ladder. We noticed untapped potential of both existing professional developers and others looking to break into the industry. They just needed connections and opportunities to grow.
 
+We also love Syracuse and Central New York. We saw opportunities for Syracuse to grow it’s tech scene. We saw potential for the people who live here to support that growth, and for that growth to in turn support the Syracuse community.
 
-So, growing out of the Syracuse Dev meetup events, we wanted to expand into more direct, 
-formalized trainging and thus the mentorship program began in Summer 2020, at a time 
+## The Board
+{: .mt-6 }
 
+- [Annalena Davis](https://www.linkedin.com/in/annalena-davis/), Web Developer at Syracuse University
+- [Ed Forth](https://www.linkedin.com/in/ed-forth-5988754b/), Customer Success at TCGplayer.com
+- [Peter Smith](https://www.linkedin.com/in/peterbsmyth/), Partner at Upstate Interactive
+- [Mike Vormwald](https://www.linkedin.com/in/mikevormwald/), Lead Software Engineer at Stitch Fix
 
-2020 was a year people took stock of themselves, and their circumstances. their lot in life.
-For those looking to imrpove we....
+Reach us at [hi@codesyracuse.org](mailto:hi@codesyracuse.org)
+{: .text-lg }
 
-with a desire to empower software developers of the Syracuse NY region
-We looked around and saw talented, driven developers, people who show up to meetups, hungry to learn
-and improve and create opportunities for themselves through careers in software.
+![CODES Board](/assets/board2.gif)
 
