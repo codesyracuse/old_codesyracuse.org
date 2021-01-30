@@ -2,13 +2,14 @@
 layout: prose
 ---
 
-<h1>Who We Are</h1>
+# Who We Are
 
 We are a group of developers, engineers, and professionals in the tech industry with a desire to empower software developers in the region. We provide programming that gives students and early-career professionals opportunities to connect with and learn from mentors and professionals in the Syracuse tech community. 
 
 We sponsor, host, and promote events and activities that provide education to individuals and help them connect to others in the industry. We also fund and facilitate grant projects that support individuals entering or already in digital careers. In turn, many of these projects then support local businesses and nonprofits.
 
-<h2 class="mt-6">Our History</h2>
+## Our History
+{: .mt-6 }
 
 Coalition of Digital Engagement in Syracuse (CODES) was established in 2020 with a goal of serving and growing the technology community in Central New York. A group of developers, engineers, and professionals who were active in the local tech community saw a need for more education, a local mentorship program, and other programming to create economic opportunities.
 
@@ -16,14 +17,16 @@ We looked around and saw talented, driven developers, people who show up to meet
 
 We also love Syracuse and Central New York. We saw opportunities for Syracuse to grow it’s tech scene. We saw potential for the people who live here to support that growth, and for that growth to in turn support the Syracuse community.
 
-<h2 class="mt-6">The Board</h2>
+## The Board
+{: .mt-6 }
 
 - [Annalena Davis](https://www.linkedin.com/in/annalena-davis/), Web Developer at Syracuse University
 - [Ed Forth](https://www.linkedin.com/in/ed-forth-5988754b/), Customer Success at TCGplayer.com
 - [Peter Smith](https://www.linkedin.com/in/peterbsmyth/), Partner at Upstate Interactive
 - [Mike Vormwald](https://www.linkedin.com/in/mikevormwald/), Lead Software Engineer at Stitch Fix
 
-<p class="text-lg">Reach us at <a href="mailto:hi@codesyracuse.org">hi@codesyracuse.org</a></p>
+Reach us at [hi@codesyracuse.org](mailto:hi@codesyracuse.org)
+{: .text-lg }
 
 ![CODES Board](/assets/board2.gif)
 
