@@ -23,4 +23,7 @@ We also love Syracuse and Central New York. We saw opportunities for Syracuse to
 - [Peter Smith](https://www.linkedin.com/in/peterbsmyth/), Partner at Upstate Interactive
 - [Mike Vormwald](https://www.linkedin.com/in/mikevormwald/), Lead Software Engineer at Stitch Fix
 
+<p class="text-lg">Reach us at <a href="mailto:hi@codesyracuse.org">hi@codesyracuse.org</a></p>
+
 ![CODES Board](/assets/board2.gif)
+

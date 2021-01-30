@@ -20,6 +20,9 @@ h3 {
 h4 {
   @apply text-lg mt-4 font-semibold text-gray-700 ;
 }
+.prose a.text-white {
+  color: white;
+}
 
 
 /* Write your styles above this line. */
