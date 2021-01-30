@@ -1,6 +1,5 @@
 ---
 layout: prose
-extra_classes: prose-yellow
 ---
 
 # CODES Programs and initiatives
