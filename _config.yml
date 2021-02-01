@@ -1,11 +1,11 @@
 title: Coalition of Digital Engagements in Syracuse NY (CODES)
 email: hi@codesyracuse.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Through in-person engagements, local digital communities, and 
-  relationships with partner organizations, our mission is to educate 
-  individuals for digital careers. We will represent working 
-  professionals as well as any person who has a desire to join a 
-  digital profession. 
+  Through in-person engagements, local digital communities, and
+  relationships with partner organizations, our mission is to educate
+  individuals for digital careers. We will represent working
+  professionals as well as any person who has a desire to join a
+  digital profession.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: codesyracuse
@@ -50,6 +50,5 @@ exclude:
   - bin
   - docker-compose.yml
   - .gitignore
-  - netlify_functions
 
 
