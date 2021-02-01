@@ -15,7 +15,6 @@
     "netlify-lambda": "^1.6.2",
     "postcss": "^8.2.2",
     "postcss-nesting": "^7.0.1",
-    "stripe": "^7.8.0",
     "tailwindcss": "^2.0.2"
   }
 }
