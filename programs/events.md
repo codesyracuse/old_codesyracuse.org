@@ -19,9 +19,8 @@ A variety of CNY tech events and groups fall under the CODES umbrella.
 
 Event organizers in the community also host a variety of other networking and educational events, like Coffee and Code meetups, Happy Hours, Panel Discussions, and more.
 
-<div class="my-6 grid md:grid-cols-2 gap-4 justify-evenly" markdown="1">
+<div class="my-6 gap-4 justify-evenly" markdown="1">
 {% include button.html content="See Our Upcoming Events" url="https://www.meetup.com/Syracuse-Software-Development-Meetup/" %}
-{% include button.html content="Join the Syracuse.io Slack Group" url="https://syracuse.io" %}
 </div>
 
 
@@ -35,6 +34,6 @@ If you are organizing an event or series of events in Central New York we’d lo
 - We can add your event to our [Meetup group](https://www.meetup.com/Syracuse-Software-Development-Meetup/) with over 700 members
 - We can sponsor your group or event to help cover the costs
 
-<div class="my-6 grid justify-center" markdown="1">
+<div class="my-6 justify-evenly" markdown="1">
 {% include button.html content="Request Support" url="https://docs.google.com/forms/d/e/1FAIpQLSc9EiBCua70ZHdKxr-2MN_8tmdReIAoxpl7-4g9CAExd2ggFw/viewform?usp=sf_link" %}
 </div>

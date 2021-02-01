@@ -2,12 +2,39 @@
 layout: prose
 ---
 
+# Get Involved
 
-## Volunteer With Us
+## Events
+{: . mt-14 }
 
-Interested in becoming a volunteer? Our community thrives thanks to those who take time out of their schedules to lend us a hand with our volunteer opportunities. If you are enthusiastic, experienced and courageous, we’d love for you to join us. The overall time commitment is up to you. Volunteer
+Join us for skill building and networking events and build out your local network.
+
+<div class="my-6 justify-evenly" markdown="1">
+{% include button.html content="Attend an Event" url="https://www.meetup.com/Syracuse-Software-Development-Meetup/" %}
+</div>
 
 
-## Become A Sponsor
+## Socialize With Us
+{: . mt-14 }
 
-We believe our organization can create positive change in the tech industry and seek sponsors to share in this endeavor. By becoming a sponsor you’ll play a critical role in expanding our community, skill-building events, mentorship, and providing access to jobs and opportunities. Sponsor
+Stay up to date with the latest community announcements, events, or job opportunities in the Syracuse area. Join our slack group and say hello!
+
+<div class="my-6 justify-evenly" markdown="1">
+{% include button.html content="Join the Syracuse.io Slack Group" url="https://syracuse.io" %}
+</div>
+
+## Become A Sponsor or Partner With Us
+{: . mt-14 }
+
+By becoming a sponsor your company will play a key role in growing the Syracuse tech community. Sponsorship supports skill-building events, our mentorship program, and other projects that help students and early-career professionals grow in their careers. 
+
+Are there other ways you’d like to work with us? Whether you work for a library, school, community center, or are just a member of the community, reach out and we’ll see if we can help. 
+
+<div class="my-6 justify-evenly" markdown="1">
+{% include button.html content="Email the Board" url="mailto:hi@codesyracuse.org" %}
+</div>
+
+
+
+
+
