@@ -29,7 +29,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      violet: colors.violet,
+      indigo: colors.indigo,
       gray: colors.coolGray,
       blue: colors.blue,
       red: colors.rose,
