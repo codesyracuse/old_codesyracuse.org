@@ -7,7 +7,8 @@ layout: prose
 
 We sponsor, host, and promote events and activities that educate and help connect people in the industry. Our goal is to gather professional or aspiring devs together to chat, learn from each other, and build out stronger networks. 
 
-<h2 class="mt-4">Our Groups and Events</h2>
+## Our Groups and Events
+{: .mt-14 }
 
 A variety of CNY tech events and groups fall under the CODES umbrella. 
 
@@ -27,7 +28,7 @@ Event organizers in the community also host a variety of other networking and ed
 
 
 ## Get Support for your Group or Event
-{: .mt-10 }
+{: .mt-14 }
 
 If you are organizing an event or series of events in Central New York we’d love to hear about it. If your event connects or educates people in the tech industry, here are some ways we may be able to help:
 
