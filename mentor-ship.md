@@ -39,29 +39,34 @@ This is about the improvement of skills as a developer or software engineer. Les
 
 <div class="grid grid-cols-2 gap-8 py-8">
   <div class="prose prose-lg" markdown="1">
-### For Captains
-{::nomarkdown}
-<button type="button" class="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+{% capture captain_icon %}
 <svg class="-ml-0.5 mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
 </svg>
-Sign Up
-</button>
-{:/}
+{% endcapture %}
+
+### For Captains
+{% include button.html 
+    content="Sign up" 
+    url="https://docs.google.com/forms/d/e/1FAIpQLSccBRrj28oM6R3mZutSnqV_uyvS1574z_PXlA4wk06takmcCg/viewform?usp=sf_link"
+    icon=captain_icon
+%}
   </div>
 
   <div class="prose prose-lg" markdown="1">
 ### For Passengers
 
-{::nomarkdown}
-<button type="button" class="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+{% capture passenger_icon %}
 <svg class="-ml-0.5 mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
   <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
 </svg>
-Sign Up
-</button>
-{:/}
+{% endcapture %}
+{% include button.html 
+    content="Sign up" 
+    url="https://docs.google.com/forms/d/e/1FAIpQLSdfwoMeOa-MDc3Aog2DHkIh2otvvnqDuQf6Lz6IhXhttVrPvg/viewform?usp=sf_link" 
+    icon=passenger_icon
+%}
   </div>
 </div>
 
@@ -69,12 +74,11 @@ Sign Up
 <div class="prose prose-lg" markdown="1">
 ## FAQs
 
-### Requirements?
+### What are the requirements?
 </div>
 
-<div class="grid grid-cols-2 prose prose-sm">
-
-  <div markdown="1">
+<div class="grid grid-cols-2 gap-8 py-8 ">
+  <div markdown="1" class="prose">
 #### For Captains
 
 - Know more than your trainee
@@ -83,7 +87,7 @@ Sign Up
 When you fill out the mentor form, we make a match with a trainee based on your skills and experience. Whether you have two years of experience or twenty you just have to be able to help guide your trainee in their learning.
   </div>
 
-<div markdown="1">
+  <div markdown="1" class="prose">
 #### For Passengers
 
 - Live in or around Syracuse, NY
