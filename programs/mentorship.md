@@ -14,7 +14,7 @@ layout: page
   <div class="prose prose-lg" markdown="1">
 ### For Captains
 
-The program pairs professional egineers with members of the Syracuse public who are looking to learn or to break into the industry. The six week program involves a mentor committing to a trainee for a 30 minute per week Zoom. The engagement involves 2-4 hours per week of a mentor’s time when including planning and review.
+The program pairs professional engineers with members of the Syracuse public who are looking to learn or to break into the industry. The six week program involves a mentor committing to a trainee for a 30 minute per week Zoom. The engagement involves 2-4 hours per week of a mentor’s time when including planning and review.
   </div>
 
   <div class="bg-teal-800 px-6 pb-6 rounded-md">
@@ -40,7 +40,7 @@ The program pairs professional egineers with members of the Syracuse public who 
             <img class="h-12 w-12 rounded-full" src="/assets/mentorship/nathan_e.jpeg" alt="Nathan E, Mentor">
           </div>
           <div class="ml-4">
-            <div class="text-base font-medium text-white">Nathan E</div>
+            <div class="text-base font-medium text-white">Nathan Evans</div>
             <div class="text-base font-medium text-teal-200">Mentor, January 2021</div>
           </div>
         </div>
