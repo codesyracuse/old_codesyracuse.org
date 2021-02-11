@@ -1,4 +1,4 @@
-title: Coalition of Digital Engagements in Syracuse NY (CODES)
+title: Coalition of Digital Engagement in Syracuse NY (CODES)
 email: hi@codesyracuse.org
 description: >- # this means to ignore newlines until "baseurl:"
   Through in-person engagements, local digital communities, and
@@ -23,7 +23,7 @@ plugins:
 author: "CODES"
 url: "codesyracuse.org"
 title: "CODESyracuse"
-description: "Coalition of Digital Engagements, Syracuse"
+description: "Coalition of Digital Engagement in Syracuse"
 twitter:
   username: "codesyracuse"
   card: "Our mission is to educate individuals for digital careers."
