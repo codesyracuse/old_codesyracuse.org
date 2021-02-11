@@ -8,7 +8,7 @@ layout: page
 ## 6 weeks of mentoring. 30 minutes per week. 150+ concepts to learn.
 </div>
 
-<div class="grid grid-cols-2 gap-8 py-8">
+<div class="grid md:grid-cols-2 gap-8 py-8">
 
 <div>
   <div class="prose prose-lg" markdown="1">
@@ -23,7 +23,7 @@ The program pairs professional egineers with members of the Syracuse public who 
         <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-teal-600" fill="currentColor" viewBox="0 0 32 32">
           <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
         </svg>
-        <p class="relative">
+        <p class="relative pt-10 md:pt-0">
         CodeSyracuse provides me with everything I need to share my passion for coding 
         with others -- whether it's matching me with mentees, providing feedback and 
         resource, or the support network of other mentors. 
@@ -62,7 +62,7 @@ The program allows any person of any skill level to learn from a professional. T
         <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-teal-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
           <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
         </svg>
-        <p class="relative">
+        <p class="relative pt-10 md:pt-0">
           Hey Peter! Happy New Year 😊
         </p>
         <p class="relative">
@@ -76,7 +76,7 @@ The program allows any person of any skill level to learn from a professional. T
           </div>
           <div class="ml-4">
             <div class="text-base font-medium text-white">Christopher Dion</div>
-            <div class="text-base font-medium text-teal-200">Trainee, Dec 2020</div>
+            <div class="text-base font-medium text-teal-200">Trainee, October 2020</div>
           </div>
         </div>
       </footer>
@@ -93,7 +93,7 @@ The program allows any person of any skill level to learn from a professional. T
 This is about the improvement of skills as a developer or software engineer. Less like job training and more like gym training. Everyone wants to make progress and the way to do it is get a trainer.
 </div>
 
-<div class="grid grid-cols-2 gap-8 py-8">
+<div class="grid md:grid-cols-2 gap-8 py-8">
   <div class="prose prose-lg" markdown="1">
 {% capture captain_icon %}
 <svg class="-ml-0.5 mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +133,7 @@ This is about the improvement of skills as a developer or software engineer. Les
 ### What are the requirements?
 </div>
 
-<div class="grid grid-cols-2 gap-8 py-8 ">
+<div class="grid md:grid-cols-2 gap-8 py-8 ">
   <div markdown="1" class="prose">
 #### For Captains
 
