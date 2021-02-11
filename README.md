@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d7703ed-a23b-48b1-b8b1-084b5f51d03c/deploy-status)](https://app.netlify.com/sites/objective-shaw-600762/deploys)
+
 # CODES
 
 
