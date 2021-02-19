@@ -17,10 +17,10 @@ layout: page
 The program pairs professional engineers with members of the Syracuse public who are looking to learn or to break into the industry. The six week program involves a mentor committing to a trainee for a 30 minute per week Zoom. The engagement involves 2-4 hours per week of a mentor’s time when including planning and review.
   </div>
 
-  <div class="bg-teal-800 px-6 pb-6 rounded-md">
+  <div class="bg-blue-800 px-6 pb-6 rounded-md">
     <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
       <div class="prose prose-md relative font-medium text-white md:flex-grow">
-        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-teal-600" fill="currentColor" viewBox="0 0 32 32">
+        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-blue-600" fill="currentColor" viewBox="0 0 32 32">
           <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
         </svg>
         <p class="relative pt-10 md:pt-0">
@@ -41,7 +41,7 @@ The program pairs professional engineers with members of the Syracuse public who
           </div>
           <div class="ml-4">
             <div class="text-base font-medium text-white">Nathan Evans</div>
-            <div class="text-base font-medium text-teal-200">Mentor, January 2021</div>
+            <div class="text-base font-medium text-blue-200">Mentor, January 2021</div>
           </div>
         </div>
       </footer>
@@ -56,10 +56,10 @@ The program pairs professional engineers with members of the Syracuse public who
 The program allows any person of any skill level to learn from a professional. That means the getting an education on a topic that matters to you from a starting point that is appropriate to the situation you are in. That means participating in the digital world as a producer, not a consumer.
   </div>
 
-  <div class="bg-teal-800 px-6 pb-6 rounded-md">
+  <div class="bg-blue-800 px-6 pb-6 rounded-md">
     <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
       <div class="prose prose-md relative font-medium text-white md:flex-grow">
-        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-teal-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-blue-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
           <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
         </svg>
         <p class="relative pt-10 md:pt-0">
@@ -76,7 +76,7 @@ The program allows any person of any skill level to learn from a professional. T
           </div>
           <div class="ml-4">
             <div class="text-base font-medium text-white">Christopher Dion</div>
-            <div class="text-base font-medium text-teal-200">Trainee, October 2020</div>
+            <div class="text-base font-medium text-blue-200">Trainee, October 2020</div>
           </div>
         </div>
       </footer>
