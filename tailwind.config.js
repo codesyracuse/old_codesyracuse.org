@@ -26,15 +26,15 @@ module.exports = {
     },
     // colors generated from https://javisperez.github.io/tailwindcolorshades/?governor-bay=3d41bf
     colors: {
-        'blue': {
+        blue: {
           '50': '#f5f6fc', 
           '100': '#ececf9', 
           '200': '#cfd0ef', 
           '300': '#b1b3e5', 
           '400': '#777ad2', 
-          '500': '#3d41bf', 
-          '600': '#373bac', 
-          '700': '#2e318f', 
+          '500': '#4e7dd9', 
+          '600': '#3e43bf', 
+          '700': '#3c19be', 
           '800': '#252773', 
           '900': '#1e205e'
       },
