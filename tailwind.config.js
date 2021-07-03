@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   important: true,
+  darkMode: 'media',
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -12,7 +13,7 @@ module.exports = {
     './_site/**/*.html',
   ],
   theme: {
-    extend: { 
+    extend: {
       minHeight: {
        '0': '0',
        '1/4': '25%',
@@ -27,15 +28,15 @@ module.exports = {
     // colors generated from https://javisperez.github.io/tailwindcolorshades/?governor-bay=3d41bf
     colors: {
         blue: {
-          '50': '#f5f6fc', 
-          '100': '#ececf9', 
-          '200': '#cfd0ef', 
-          '300': '#b1b3e5', 
-          '400': '#777ad2', 
-          '500': '#4e7dd9', 
-          '600': '#3e43bf', 
-          '700': '#3c19be', 
-          '800': '#252773', 
+          '50': '#f5f6fc',
+          '100': '#ececf9',
+          '200': '#cfd0ef',
+          '300': '#b1b3e5',
+          '400': '#777ad2',
+          '500': '#4e7dd9',
+          '600': '#3e43bf',
+          '700': '#3c19be',
+          '800': '#252773',
           '900': '#1e205e'
       },
       transparent: 'transparent',

@@ -1,4 +1,4 @@
-<div class="relative bg-white" x-data="{ isOpen: false }" @keydown.escape="{ isOpen = false}">
+<div class="relative bg-gray-900" x-data="{ isOpen: false }" @keydown.escape="{ isOpen = false}">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
       <div class="lg:w-0 lg:flex-1">
@@ -9,7 +9,7 @@
       <div class="-mr-2 -my-2 md:hidden">
         <button
           @click="isOpen = true"
-          type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-600 transition duration-150 ease-in-out">
+          type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-100 focus:text-gray-600 transition duration-150 ease-in-out">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -24,9 +24,9 @@
            @mouseleave="isHover = false">
         <div class="relative">
           <button type="button"
-            class="group bg-white rounded-md text-gray-600 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            class="group bg-white dark:bg-gray-900 rounded-md text-gray-600 dark:text-white inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             <span>Programs</span>
-            <svg class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+            <svg class="ml-2 h-5 w-5 text-gray-400 dark:text-white group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd"
                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -41,36 +41,36 @@
             x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1">
 
             <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                <a href="/programs/mentorship" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                  <svg class="flex-shrink-0 h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              <div class="relative grid gap-6 bg-white dark:bg-gray-900  px-5 py-6 sm:gap-8 sm:p-8">
+                <a href="/programs/mentorship" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
+                  <svg class="flex-shrink-0 h-6 w-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
                     </path>
                   </svg>
                   <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">
+                    <p class="text-base font-medium text-gray-900 dark:text-blue-300">
                       Mentorship
                     </p>
-                    <p class="mt-1 text-sm text-gray-500">
+                    <p class="mt-1 text-sm text-gray-500 dark:text-white">
                       Learn more about our Mentorship program, level up your skills or help others
                     </p>
                     </div>
                    </a>
 
-                    <a href="/programs/events" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                      <svg class="w-6 h-6 flex-shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <a href="/programs/events" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
+                      <svg class="w-6 h-6 flex-shrink-0 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                         </path>
                       </svg>
                       <div class="ml-4">
-                        <p class="text-base font-medium text-gray-900">
+                        <p class="text-base font-medium text-gray-900 dark:text-blue-300">
                           Events
                         </p>
-                        <p class="mt-1 text-sm text-gray-500">
+                        <p class="mt-1 text-sm text-gray-500 dark:text-white">
                           Community events held in person or virtually. Focus on learning new skills and networking with local
                           devs
                         </p>
@@ -83,12 +83,12 @@
       </nav>
 
       <nav class="hidden md:flex space-x-10 items-center justify-end">
-        <a href="/about-codes" class="text-base leading-6 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+        <a href="/about-codes" class="text-base leading-6 font-medium text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-400 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
           About CODES
         </a>
       </nav>
       <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-        <a href="/get-involved" class="whitespace-no-wrap text-base leading-6 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+        <a href="/get-involved" class="whitespace-no-wrap text-base leading-6 font-medium text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-400 focus:outline-none focus:text-gray-900">
           Get Involved
         </a>
         <span class="inline-flex rounded-md shadow-sm ml-8">
@@ -109,7 +109,7 @@
           x-transition:leave-start="opacity-100 scale-100"
           x-transition:leave-end="opacity-0 scale-95">
       <div class="rounded-lg shadow-lg">
-        <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
+        <div class="rounded-lg shadow-xs bg-white dark:bg-gray-900 divide-y-2 divide-gray-50">
           <div class="pt-5 pb-6 px-5 space-y-6">
             <div class="flex items-center justify-between">
               <a href="/" class="font-mono text-lg font-semibold">
@@ -118,7 +118,7 @@
               <div class="-mr-2">
                 <button
                   @click="isOpen = false"
-                  type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-600 transition duration-150 ease-in-out">
+                  type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700  focus:outline-none focus:bg-gray-100 focus:text-gray-600 transition duration-150 ease-in-out">
                   <!-- Heroicon name: x -->
                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

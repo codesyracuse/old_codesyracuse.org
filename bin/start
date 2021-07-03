@@ -1,3 +1,3 @@
 #!/bin/sh
 
-bundle exec jekyll serve --livereload --drafts --future --port 4000 --livereload_port 35729 "$@"
+bundle exec jekyll serve --livereload --host 0.0.0.0 --drafts --future --port 4000 --livereload_port 35729 "$@"
