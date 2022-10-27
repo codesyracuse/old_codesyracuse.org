@@ -103,7 +103,7 @@ This is about the improvement of skills as a developer or software engineer. Les
 
 ### For Captains
 {% include button.html 
-    content="Sign up" 
+    content="Sign up to Mentor" 
     url="https://docs.google.com/forms/d/e/1FAIpQLSccBRrj28oM6R3mZutSnqV_uyvS1574z_PXlA4wk06takmcCg/viewform?usp=sf_link"
     icon=captain_icon
 %}
@@ -119,7 +119,7 @@ This is about the improvement of skills as a developer or software engineer. Les
 </svg>
 {% endcapture %}
 {% include button.html 
-    content="Sign up" 
+    content="Sign up for the Waitlist" 
     url="https://docs.google.com/forms/d/e/1FAIpQLSdfwoMeOa-MDc3Aog2DHkIh2otvvnqDuQf6Lz6IhXhttVrPvg/viewform?usp=sf_link" 
     icon=passenger_icon
 %}
